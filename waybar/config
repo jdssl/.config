@@ -1,0 +1,112 @@
+{
+  "layer": "top",
+    "position": "top",
+    "height": 27,
+    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "network", "battery", "clock", "custom/notification", "tray"],
+    "hyprland/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": false,
+      "warp-on-scroll": false,
+      "format-icons": {},
+      "format": "  {icon}  "
+        //"format":"{icon}",
+        //"format-icons": {
+        //  "1": "one",
+        //  "2": "two",
+        //  "3": "three",
+        //  "4": "four",
+        //  "5": "five",
+        //  "6": "six",
+        //  "7": "sev",
+        //  "8": "eigh",
+        //  "9": "nine",
+        //  "10": "ten",
+        //},
+    },
+    "network": {
+      //"format-connected": "{icon} {ssid}  ",
+      "format": "{icon}  ",
+      "format-disconnected": "No Connection",
+      "format-icons": {
+        "wifi": "",
+        "wifi-connected": "",
+        "wifi-disconnected": "睊"
+      },
+     "on-click": "nm-connection-editor"
+
+     // "format": "{icon} {ssid}",
+     // "format-connected": "{icon} {ssid}",
+     // "format-disconnected": "No Connection",
+     // "on-click": "nm-connection-editor",
+     // "icon": {
+     //   "wifi": "",  // ou o ícone que preferir
+     //   "wifi-connected": "",
+     //   "wifi-disconnected": "睊"
+     // }
+    },
+    "battery": {
+        "format": " {icon}  {capacity}% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+      "format": "  {:%d %b, %Y, %a - %R}",
+      "tooltip": false
+    },
+    "hyprland/window": {
+      "max-length": 60,
+      "separate-outputs": false
+    },
+    "memory": {
+      "interval": 5,
+      "format": "  {}%"
+    },
+    "cpu": {
+      "interval": 5,
+      "format": "  {usage:2}%",
+      "tooltip": false
+    },
+    "disk": {
+      "format": "  {free}/{total}",
+      "tooltip": false
+    },
+    "tray": {
+      //"icon-size": 12,
+      "spacing": 12
+    },
+    "pulseaudio": {
+      "format": "{icon} {volume}%  {format_source}",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": "  {format_source}",
+      "format-source": "   {volume}% ",
+      "format-source-muted": "",
+      "format-icons": {
+        "headphone": " ",
+        "hands-free": " ",
+        "headset": " ",
+        "phone": " ",
+        "portable": " ",
+        "car": " ",
+        "default": [" ", " ", " "]
+      },
+      "on-click": "pavucontrol"
+    },
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span> ",
+        "none": " ",
+        "dnd-notification": "<span foreground='red'><sup></sup></span> ",
+        "dnd-none": " "
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
+    },
+}

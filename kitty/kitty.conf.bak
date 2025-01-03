@@ -1,0 +1,133 @@
+# fonts
+
+# font_family      Jetbrains Mono
+# font_family      Liberation Mono
+# font_family      IBM 3270
+# font_family      IBM Plex Mono
+# font_family      Input Mono
+# font_family      Fantasque Sans Mono Regular
+# font_family      Iosevka
+# font_family      Noto Sans Mono Regular Nerd Font Complete Mono
+# font_family      NotoSansMono Nerd Font Mono
+# font_family      Victor Mono Regular
+# font_family      Monaco Nerd Font Mono
+# font_family      SFMono Nerd Font
+# font_family      IntelOne Mono
+font_family Liga SFMono Nerd Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+# font size
+# monitor internal
+# font_size 10
+# font_size 12
+
+# external monitor
+font_size 16
+
+# adjust_line_height 110%
+# Default
+# adjust_line_height 150%
+
+foreground_opacity		0.5
+background_opacity		0.9
+
+map alt+left send_text all \x1b\x62
+map alt+right send_text all \x1b\x67
+map ctrl+f launch --type=overlay --stdin-source=@screen_scrollback /usr/bin/fzf --no-sort --no-mouse --exact -i
+
+# themes
+# include ./themes/everforest.conf
+ # include ./themes/gruvbox_dark.conf
+# include ./themes/gruvbox_light.conf
+ # include ./themes/dracula.conf
+# include ./themes/jellybeans.conf
+# include ./themes/monokai.conf
+# include ./themes/zenbrun.conf
+# include ./themes/github.conf
+# include ./themes/3024.conf
+# include ./themes/ayu.conf
+# include ./themes/ayu_light.conf
+# include ./themes/ayu_mirage.conf
+# include ./themes/solarized_dark.conf
+# include ./themes/solarized_light.conf
+# include ./themes/kanagawa.conf
+# include ./themes/kanagawa_dragon.conf
+include ./themes/terafox.conf
+# include ./themes/duskfox.conf
+# include ./themes/nightfox.conf
+# include ./themes/nordic.conf
+# include ./themes/gotham.conf
+# include ./themes/nord.conf
+# include ./themes/melange_dark.conf
+
+# OS specific changes
+# macos_hide_from_tasks no
+# macos_option_as_alt yes
+# macos_titlebar_color system
+# macos_traditional_fullscreen yes
+# macos_thicken_font 0.75
+# macos_thicken_font 0.65
+
+# DELL
+# macos_thicken_font 0.15
+# macos_thicken_font 0.45
+
+# LG
+# macos_thicken_font 0.65
+
+open_url_modifiers cmd
+
+# mouse settings
+mouse_hide_wait   1
+shell_integration no-cursor
+cursor_shape block
+# cursor #ffbb70
+
+# advanced
+# allow_remote_control yes
+# clipboard_control write-clipboard write-primary
+# term xterm-kitty
+
+window_border_width   4
+window_margin_width   8
+
+# window_border_width   4
+# window_margin_width   2
+# active_border_color   #ffffff
+# inactive_border_color #cccccc
+
+enable_audio_bell no
+
+# Layout
+enabled_layouts splits:split_axis=horizontal
+
+# Splits
+# map f4 launch --location=split
+map f6 launch --location=vsplit
+map f7 launch --location=hsplit
+# map f7 layout_action rotate
+
+# Resize
+map shift+left resize_window narrower
+map shift+right resize_window wider
+map shift+up resize_window taller
+map shift+down resize_window shorter 3
+
+# reset all windows in the tab to default sizes
+map ctrl+home resize_window reset
+
+# Switch focus to the neighboring window in the indicated direction
+# map ctrl+left neighboring_window left
+# map ctrl+right neighboring_window right
+# map ctrl+up neighboring_window up
+# map ctrl+down neighboring_window down
+
+
+
+
+# BEGIN_KITTY_THEME
+# Rose Pine Moon
+include current-theme.conf
+# END_KITTY_THEME
